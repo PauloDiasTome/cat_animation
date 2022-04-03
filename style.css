@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: url("img/fundo.jpg");
+    background-size: cover;
+    overflow: hidden;
+    animation: backg 30s linear infinite
+}
+
+.animation-horizontal{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 25%;
+    animation: animation 6s linear infinite;
+}
+
+.cat{
+    width: 385px;
+    height: 200px;
+    background-image: url("img/gat.png");
+    position: absolute;
+    right: -1px;
+    animation: cat 1s steps(12) infinite;
+}
+
+@keyframes cat{
+    100%{
+        background-position: 0 -2393px;
+    }
+}
+
+@keyframes backg{
+    0%{
+        background-position: 200%;
+    }
+}
+
+@keyframes animation{
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@media screen and (max-width:500px){
+
+    @keyframes backg{
+        0%{
+            background-position: 30%;
+        }
+    }
+
+    .animation-horizontal{
+        animation: animation 3s linear infinite;
+    }
+}
